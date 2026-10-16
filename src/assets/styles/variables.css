@@ -15,8 +15,16 @@
   --on-ink: #fbfaf7;
 
   /* Typography */
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --sans:  "Instrument Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --serif: "Fraunces", "Battambang", Georgia, "Times New Roman", serif;
+  --sans:  "Instrument Sans", "Kantumruy Pro", "Inter", "Siemreap", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-khmer: "Kantumruy Pro", "Inter", "Siemreap", sans-serif;
+  --font-khmer-heading: "Battambang", "Kantumruy Pro", "Siemreap", serif;
+  --mono:  "Roboto Mono", monospace;
+
+  /* Hero title scale */
+  --hero-title-size: clamp(40px, 6vw, 84px);
+  --hero-title-lh: 1.05;
+  --hero-title-ls: -0.02em;
 
   /* Safe areas */
   box-sizing: border-box;
@@ -37,4 +45,16 @@
   --ink: #f1efe9; --paper: #0f1626; --surface: #172037; --muted: #a2aec6;
   --line: #2a3553; --sky: #1b2742; --sky-2: #2a3a5e; --on-ink: #0f1626; --sun: #f2b632;
 }
+
+/* Khmer language typography */
+html[lang="km"],
+:root[lang="km"],
+[lang="km"] {
+  --serif: "Battambang", "Kantumruy Pro", "Siemreap", serif;
+  --sans:  "Kantumruy Pro", "Inter", "Siemreap", system-ui, sans-serif;
+  --hero-title-size: clamp(26px, 3.8vw, 52px);
+  --hero-title-lh: 1.4;
+  --hero-title-ls: 0;
+}
+
 

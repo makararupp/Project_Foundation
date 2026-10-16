@@ -3,28 +3,23 @@
   <AnnouncementBar />
   <SiteHeader />
   <main id="main">
-    <HeroSection />
-    <VisitSection />
-    <ExperienceSection />
-    <MissionSection />
-    <StoriesSection />
-    <SignupSection />
-    <ProgramsSection />
-    <DonateSection />
+    <router-view />
   </main>
   <SiteFooter />
 </template>
 
 <script setup>
+import { watchEffect } from 'vue'
+import { useI18n } from 'vue-i18n'
 import AnnouncementBar from './components/AnnouncementBar.vue'
 import SiteHeader from './components/SiteHeader.vue'
-import HeroSection from './components/HeroSection.vue'
-import VisitSection from './components/VisitSection.vue'
-import ExperienceSection from './components/ExperienceSection.vue'
-import MissionSection from './components/MissionSection.vue'
-import StoriesSection from './components/StoriesSection.vue'
-import SignupSection from './components/SignupSection.vue'
-import ProgramsSection from './components/ProgramsSection.vue'
-import DonateSection from './components/DonateSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
+
+const { locale } = useI18n()
+
+watchEffect(() => {
+  if (typeof document !== 'undefined') {
+    document.documentElement.setAttribute('lang', locale.value)
+  }
+})
 </script>

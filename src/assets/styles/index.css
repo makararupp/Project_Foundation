@@ -2,6 +2,7 @@
    MAIN STYLESHEET — imports all partials in order
    Edit individual files instead of this one.
    ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&family=Kantumruy+Pro:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&family=Siemreap&display=swap');
 @import './variables.css';   /* 1. Design tokens (colours, fonts) */
 @import './base.css';        /* 2. Reset & global defaults        */
 @import './components.css';  /* 3. Reusable UI components         */

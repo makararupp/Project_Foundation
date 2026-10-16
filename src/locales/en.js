@@ -37,11 +37,15 @@ export default {
   },
   mission: {
     title: 'Our Mission',
+    tag: 'FOUNDATION MISSION',
     text1: 'We help people',
     learn: 'learn',
     lead: 'lead',
+    and: 'and',
     connect: 'connect',
     text2: 'so they can improve the places they call home.',
+    paragraph: 'Creating lasting change starts in the heart of our community. For years, we have been dedicated to opening doors for leaders, fostering youth innovation, and building spaces that bring everyone closer together.',
+    quote: 'Every neighborhood holds the power to shape its own future when given the tools, trust, and resources.',
   },
   stories: {
     heading: 'Stories from leaders and neighbors.',
@@ -134,5 +138,10 @@ export default {
     note: 'Placeholder content. Replace the text, images, and links with your own.',
     terms: 'Terms of service',
     privacy: 'Privacy policy',
+  },
+  announcement: {
+    highlight: 'Tour tickets are limited.',
+    text: 'New dates open on the first Monday of each month at 9 a.m.',
+    link: 'Get notified',
   },
 }

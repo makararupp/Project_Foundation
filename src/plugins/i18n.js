@@ -16,3 +16,7 @@ export const i18n = createI18n({
   },
 })
 
+if (typeof document !== 'undefined') {
+  document.documentElement.setAttribute('lang', savedLocale)
+}
+

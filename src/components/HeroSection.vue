@@ -97,6 +97,19 @@ onUnmounted(() => clearInterval(timer))
 .hero-content h1 { color: #fff; }
 .hero-content p.lede { color: rgba(255,255,255,0.85); }
 
+:global(html[lang="km"]) .hero-content h1,
+:global([lang="km"]) .hero-content h1 {
+  font-size: clamp(26px, 3.8vw, 52px);
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+:global(html[lang="km"]) .hero-content h1 .swap,
+:global([lang="km"]) .hero-content h1 .swap {
+  min-height: 1.35em;
+  margin-top: 6px;
+}
+
 /* ── Animated RGB Title Effect ── */
 .rgb-title {
   display: inline;

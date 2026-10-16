@@ -1,13 +1,13 @@
 <template>
   <header class="site">
     <div class="wrap">
-      <a class="brand" href="#" :aria-label="`${siteName} home`">
+      <router-link class="brand" to="/" :aria-label="`${siteName} home`">
         <svg viewBox="0 0 40 40" aria-hidden="true">
           <circle cx="20" cy="22" r="9" fill="#f2b632"/>
           <path d="M2 30h36M7 36h26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
         </svg>
         SOTHEARITH FOUNDATION
-      </a>
+      </router-link>
 
       <button class="menu-toggle" :aria-expanded="open" aria-controls="primary-nav" @click="open = !open">
         Menu
@@ -15,13 +15,13 @@
 
       <nav id="primary-nav" aria-label="Primary" :class="{ open }" @click="open = false">
         <ul>
-          <li><a href="#visit">{{ t('nav.visit') }}</a></li>
-          <li><a href="#stories">{{ t('nav.stories') }}</a></li>
-          <li><a href="#mission">{{ t('nav.mission') }}</a></li>
-          <li><a href="#programs">{{ t('nav.programs') }}</a></li>
-          <li><a href="#footer">{{ t('nav.about') }}</a></li>
+          <li><router-link to="/#visit">{{ t('nav.visit') }}</router-link></li>
+          <li><router-link to="/#stories">{{ t('nav.stories') }}</router-link></li>
+          <li><router-link to="/mission" class="nav-mission-link">{{ t('nav.mission') }}</router-link></li>
+          <li><router-link to="/#programs">{{ t('nav.programs') }}</router-link></li>
+          <li><router-link to="/#footer">{{ t('nav.about') }}</router-link></li>
 
-          <!-- Language Dropdown in navigation menu -->
+      
           <li class="lang-dropdown" @click.stop>
             <button
               class="lang-trigger"
