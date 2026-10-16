@@ -2,6 +2,7 @@ export default {
   nav: {
     visit: 'Visit',
     stories: 'Stories',
+    mission: 'Mission',
     programs: 'Programs',
     about: 'About',
     donate: 'Donate',
@@ -35,6 +36,7 @@ export default {
     item3Link: 'Explore membership',
   },
   mission: {
+    title: 'Our Mission',
     text1: 'We help people',
     learn: 'learn',
     lead: 'lead',

@@ -1,44 +1,3 @@
-<script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { siteName } from '../data/content.js'
-
-const { t, locale } = useI18n()
-const open = ref(false)
-const langDropdownOpen = ref(false)
-
-const languages = [
-  { code: 'en', label: 'English', flag: '🇺🇸' },
-  { code: 'km', label: 'ខ្មែរ (Khmer)', flag: '🇰🇭' },
-  { code: 'zh', label: '中文 (Chinese)', flag: '🇨🇳' },
-]
-
-const currentLang = computed(() => {
-  return languages.find(l => l.code === locale.value) || languages[0]
-})
-
-function toggleLangDropdown() {
-  langDropdownOpen.value = !langDropdownOpen.value
-}
-
-function selectLanguage(lang) {
-  locale.value = lang.code
-  localStorage.setItem('locale', lang.code)
-  langDropdownOpen.value = false
-}
-
-// Close dropdown when clicking outside
-function handleClickOutside(e) {
-  const dropdown = document.querySelector('.lang-dropdown')
-  if (dropdown && !dropdown.contains(e.target)) {
-    langDropdownOpen.value = false
-  }
-}
-
-onMounted(() => window.addEventListener('click', handleClickOutside))
-onUnmounted(() => window.removeEventListener('click', handleClickOutside))
-</script>
-
 <template>
   <header class="site">
     <div class="wrap">
@@ -47,7 +6,7 @@ onUnmounted(() => window.removeEventListener('click', handleClickOutside))
           <circle cx="20" cy="22" r="9" fill="#f2b632"/>
           <path d="M2 30h36M7 36h26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
         </svg>
-        SOTHEARITH
+        SOTHEARITH FOUNDATION
       </a>
 
       <button class="menu-toggle" :aria-expanded="open" aria-controls="primary-nav" @click="open = !open">
@@ -58,6 +17,7 @@ onUnmounted(() => window.removeEventListener('click', handleClickOutside))
         <ul>
           <li><a href="#visit">{{ t('nav.visit') }}</a></li>
           <li><a href="#stories">{{ t('nav.stories') }}</a></li>
+          <li><a href="#mission">{{ t('nav.mission') }}</a></li>
           <li><a href="#programs">{{ t('nav.programs') }}</a></li>
           <li><a href="#footer">{{ t('nav.about') }}</a></li>
 
@@ -89,7 +49,8 @@ onUnmounted(() => window.removeEventListener('click', handleClickOutside))
                     type="button"
                   >
                     <span class="flag">{{ lang.flag }}</span>
-                    <span>{{ lang.label }}</span>
+                    <strong class="lang-code">{{ lang.label }}</strong>
+                    <span class="lang-fullname">{{ lang.name }}</span>
                     <span v-if="currentLang.code === lang.code" class="check">✓</span>
                   </button>
                 </li>
@@ -103,6 +64,47 @@ onUnmounted(() => window.removeEventListener('click', handleClickOutside))
     </div>
   </header>
 </template>
+
+<script setup>
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { siteName } from '../data/content.js'
+
+const { t, locale } = useI18n()
+const open = ref(false)
+const langDropdownOpen = ref(false)
+
+const languages = [
+  { code: 'en', label: 'EN', name: 'English', flag: '🇺🇸' },
+  { code: 'km', label: 'KH', name: 'ខ្មែរ (Khmer)', flag: '🇰🇭' },
+  { code: 'zh', label: 'CN', name: '中文 (Chinese)', flag: '🇨🇳' },
+]
+
+const currentLang = computed(() => {
+  return languages.find(l => l.code === locale.value) || languages[0]
+})
+
+function toggleLangDropdown() {
+  langDropdownOpen.value = !langDropdownOpen.value
+}
+
+function selectLanguage(lang) {
+  locale.value = lang.code
+  localStorage.setItem('locale', lang.code)
+  langDropdownOpen.value = false
+}
+
+// Close dropdown when clicking outside
+function handleClickOutside(e) {
+  const dropdown = document.querySelector('.lang-dropdown')
+  if (dropdown && !dropdown.contains(e.target)) {
+    langDropdownOpen.value = false
+  }
+}
+
+onMounted(() => window.addEventListener('click', handleClickOutside))
+onUnmounted(() => window.removeEventListener('click', handleClickOutside))
+</script>
 
 <style scoped>
 .lang-dropdown {
@@ -174,6 +176,18 @@ onUnmounted(() => window.removeEventListener('click', handleClickOutside))
   cursor: pointer;
   text-align: left;
   transition: background 0.15s ease;
+}
+
+.lang-code {
+  font-size: 13px;
+  background: var(--sky);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.lang-fullname {
+  font-size: 13px;
+  color: var(--muted);
 }
 
 .lang-option:hover {

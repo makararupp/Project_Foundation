@@ -4,8 +4,11 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <section class="mission" aria-label="Mission">
+  <section class="mission" id="mission" aria-label="Mission">
     <div class="wrap">
+      <div class="sec-head">
+        <h2>{{ t('mission.title') }}</h2>
+      </div>
       <p>
         {{ t('mission.text1') }}
         <em>{{ t('mission.learn') }}</em>,

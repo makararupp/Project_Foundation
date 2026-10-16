@@ -3,10 +3,12 @@ export const siteName = 'SOTHEARITH Foundation'
 
 export const nav = [
   { label: 'Visit', href: '#visit' },
+  { label: 'Mission', href: '#mission' },
   { label: 'Stories', href: '#stories' },
   { label: 'Programs', href: '#programs' },
   { label: 'About', href: '#footer' },
   { label: 'English', href: '#English' },
+   
 ]
 
 export const heroWords = ['A campus', 'A museum', 'Art', 'Sports', 'Events']

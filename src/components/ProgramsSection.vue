@@ -1,16 +1,3 @@
-<script setup>
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { programs } from '../data/content.js'
-
-const { t, tm } = useI18n()
-
-const translatedPrograms = computed(() => {
-  const items = tm('programs.items')
-  return Array.isArray(items) && items.length > 0 ? items : programs
-})
-</script>
-
 <template>
   <section class="programs" id="programs">
     <div class="wrap">
@@ -29,8 +16,21 @@ const translatedPrograms = computed(() => {
             </li>
           </ul>
         </div>
-        <div class="ph" aria-hidden="true"></div>
+        <!-- <div class="ph" aria-hidden="true"></div> -->
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { programs } from '../data/content.js'
+
+const { t, tm } = useI18n()
+
+const translatedPrograms = computed(() => {
+  const items = tm('programs.items')
+  return Array.isArray(items) && items.length > 0 ? items : programs
+})
+</script>

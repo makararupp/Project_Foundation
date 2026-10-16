@@ -2,6 +2,7 @@ export default {
   nav: {
     visit: '参观',
     stories: '故事',
+    mission: '使命',
     programs: '项目',
     about: '关于我们',
     donate: '捐款',
@@ -35,6 +36,7 @@ export default {
     item3Link: '探索会员权益',
   },
   mission: {
+    title: '我们的使命',
     text1: '我们致力于帮助人们',
     learn: '学习',
     lead: '领导',

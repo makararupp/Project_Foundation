@@ -2,6 +2,7 @@ export default {
   nav: {
     visit: 'ទស្សនា',
     stories: 'រឿងរ៉ាវ',
+    mission: 'បេសកកម្ម',
     programs: 'កម្មវិធី',
     about: 'អំពីយើង',
     donate: 'បរិច្ចាគ',
@@ -35,6 +36,7 @@ export default {
     item3Link: 'ស្វែងយល់អំពីសមាជិកភាព',
   },
   mission: {
+    title: 'បេសកកម្មរបស់យើង',
     text1: 'យើងជួយមនុស្សឱ្យ',
     learn: 'រៀនសូត្រ',
     lead: 'ដឹកនាំ',
