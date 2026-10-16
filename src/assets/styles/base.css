@@ -1,0 +1,23 @@
+/* ============================================================
+   BASE — reset, body, global elements
+   ============================================================ */
+html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 4px; }
+
+/* Skip to content (accessibility) */
+.skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--on-ink); padding: 8px 14px; z-index: 50; }
+.skip:focus { left: 8px; }
+
+/* Layout container */
+.wrap { width: min(1200px, 100% - 48px); margin-inline: auto; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero h1 .swap span { animation: none; }
+}
+

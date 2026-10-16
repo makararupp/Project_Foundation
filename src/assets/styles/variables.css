@@ -1,0 +1,40 @@
+/* ============================================================
+   DESIGN TOKENS — colours, fonts, spacing
+   ============================================================ */
+:root {
+  /* Colours */
+  --ink:    #14213d;
+  --paper:  #fbfaf7;
+  --surface:#ffffff;
+  --muted:  #55607a;
+  --line:   #d9dde6;
+  --sun:    #f2b632;
+  --sky:    #dce8f4;
+  --sky-2:  #b9d0e8;
+  --leaf:   #2f6b5a;
+  --on-ink: #fbfaf7;
+
+  /* Typography */
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans:  "Instrument Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+  /* Safe areas */
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Auto dark mode */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #f1efe9; --paper: #0f1626; --surface: #172037; --muted: #a2aec6;
+    --line: #2a3553; --sky: #1b2742; --sky-2: #2a3a5e; --on-ink: #0f1626; --sun: #f2b632;
+  }
+}
+
+/* Manual dark mode */
+:root[data-theme="dark"] {
+  --ink: #f1efe9; --paper: #0f1626; --surface: #172037; --muted: #a2aec6;
+  --line: #2a3553; --sky: #1b2742; --sky-2: #2a3a5e; --on-ink: #0f1626; --sun: #f2b632;
+}
+

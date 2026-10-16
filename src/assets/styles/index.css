@@ -1,0 +1,9 @@
+/* ============================================================
+   MAIN STYLESHEET — imports all partials in order
+   Edit individual files instead of this one.
+   ============================================================ */
+@import './variables.css';   /* 1. Design tokens (colours, fonts) */
+@import './base.css';        /* 2. Reset & global defaults        */
+@import './components.css';  /* 3. Reusable UI components         */
+@import './layout.css';      /* 4. Page sections & responsive     */
+
