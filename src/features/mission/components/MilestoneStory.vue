@@ -2,7 +2,71 @@
   <section class="feature-story">
     <div class="feature-top-bar"></div>
 
-    <div class="editorial-grid">
+    <!-- Column layout (layout: 'column'): header on top, one text column with an inline image -->
+    <div v-if="milestone.layout === 'column'" class="column-story">
+      <div class="column-header">
+        <h2 class="feature-date">{{ formatMilestoneDate(milestone.year, milestone.month, locale) }}</h2>
+        <p class="feature-subtitle">{{ t(key('subtitle')) }}</p>
+      </div>
+
+      <div class="column-body">
+        <p v-html="t(key('p1'))"></p>
+        <p v-if="has('p2')" v-html="t(key('p2'))"></p>
+
+        <figure v-if="milestone.image" class="column-figure">
+          <img :src="milestone.image" :alt="milestone.imageAlt" class="column-img" />
+          <figcaption v-if="has('caption')" class="column-caption">{{ t(key('caption')) }}</figcaption>
+        </figure>
+
+        <p v-if="has('p3')" v-html="t(key('p3'))"></p>
+        <p v-if="has('p4')" v-html="t(key('p4'))"></p>
+      </div>
+
+      <div v-if="has('callout')" class="story-callout column-callout">
+        <p class="callout-text">{{ t(key('callout')) }}</p>
+      </div>
+    </div>
+
+    <!-- Pair layout (layout: 'pair'): header on top, one text column, then two images side by side -->
+    <div v-else-if="milestone.layout === 'pair'" class="column-story">
+      <div class="column-header">
+        <h2 class="feature-date">{{ formatMilestoneDate(milestone.year, milestone.month, locale) }}</h2>
+        <p class="feature-subtitle">{{ t(key('subtitle')) }}</p>
+      </div>
+
+      <div class="column-body">
+        <p v-html="t(key('p1'))"></p>
+        <p v-if="has('p2')" v-html="t(key('p2'))"></p>
+      </div>
+
+      <div v-if="milestone.images" class="pair-grid">
+        <figure v-for="(img, i) in milestone.images" :key="img.src" class="pair-figure">
+          <img :src="img.src" :alt="img.alt" class="pair-img" />
+          <figcaption v-if="has(`caption${i + 1}`)" class="column-caption">{{ t(key(`caption${i + 1}`)) }}</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Photo layout (layout: 'photo'): header on top, then a centered column with the image first and text below -->
+    <div v-else-if="milestone.layout === 'photo'" class="column-story">
+      <div class="column-header">
+        <h2 class="feature-date">{{ formatMilestoneDate(milestone.year, milestone.month, locale) }}</h2>
+        <p class="feature-subtitle">{{ t(key('subtitle')) }}</p>
+      </div>
+
+      <div class="photo-body">
+        <figure v-if="milestone.image" class="photo-figure">
+          <img :src="milestone.image" :alt="milestone.imageAlt" class="photo-img" />
+          <figcaption v-if="has('caption')" class="column-caption">{{ t(key('caption')) }}</figcaption>
+        </figure>
+
+        <p v-html="t(key('p1'))"></p>
+        <p v-if="has('p2')" v-html="t(key('p2'))"></p>
+        <p v-if="has('p3')" v-html="t(key('p3'))"></p>
+      </div>
+    </div>
+
+    <div v-else class="editorial-grid">
       <!-- Row 1: Left Milestone Header & Right Intro Paragraphs -->
       <div class="grid-left-header">
         <h2 class="feature-date">{{ formatMilestoneDate(milestone.year, milestone.month, locale) }}</h2>
@@ -40,8 +104,7 @@
 
           <p v-if="has('p4')" class="story-p">{{ t(key('p4')) }}</p>
         </div>
-      </template>
-    </div>
+      </template>    </div>
   </section>
 </template>
 
@@ -114,10 +177,122 @@ const has = (field) => te(key(field))
   margin: 0 0 18px 0;
 }
 
-/* <em> inside v-html text from the locale files */
+/* Column layout: text column indented past the header, callout slightly wider */
+.column-header {
+  margin-bottom: 28px;
+}
+
+.column-body,
+.column-callout {
+  margin-left: calc(210px + 48px);
+  max-width: 560px;
+}
+
+.column-callout {
+  max-width: 720px;
+  margin-top: 12px;
+}
+
+.column-body p {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0 0 18px 0;
+}
+
+.column-figure {
+  margin: 8px 0 28px 0;
+}
+
+.column-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.column-caption {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  margin-top: 8px;
+  line-height: 1.3;
+}
+
+/* Pair layout: two images side by side, full width */
+.pair-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-top: 16px;
+}
+
+.pair-figure {
+  margin: 0;
+}
+
+.pair-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Photo layout: narrow column centered on the page, image above the text */
+.photo-body {
+  max-width: 460px;
+  margin: 48px auto 0;
+}
+
+.photo-body p {
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0 0 18px 0;
+}
+
+.photo-figure {
+  margin: 0 0 28px 0;
+}
+
+.photo-img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* <em> and <a> inside v-html text from the locale files */
 .feature-story :deep(em) {
   font-style: italic;
   font-weight: inherit;
+}
+
+.feature-story :deep(a) {
+  color: #d9480f;
+  text-decoration: none;
+}
+
+.feature-story :deep(a:hover) {
+  text-decoration: underline;
+}
+
+:root[data-theme="dark"] .feature-story :deep(a) {
+  color: #ff8a4c;
+}
+
+/* Wrap long titles instead of running across the page */
+.column-header .feature-subtitle {
+  max-width: 500px;
 }
 
 /* Left side portrait */
@@ -197,6 +372,26 @@ const has = (field) => te(key(field))
   }
   .story-callout {
     padding: 24px 20px;
+  }
+  .column-body,
+  .column-callout {
+    margin-left: 0;
+    max-width: none;
+  }
+  .pair-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .photo-body {
+    margin-top: 0;
+  }
+}
+
+/* Tablet: shrink the indent so the column keeps a readable width */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .column-body,
+  .column-callout {
+    margin-left: 80px;
   }
 }
 </style>
