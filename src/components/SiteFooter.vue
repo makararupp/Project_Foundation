@@ -23,7 +23,13 @@
           <h4>{{ col.title }}</h4>
           <ul>
             <li v-for="l in col.links" :key="l">
-              <a href="#">{{ l }}</a>
+              <a
+                v-if="footer.linkUrls[l]"
+                :href="footer.linkUrls[l]"
+                target="_blank"
+                rel="noopener noreferrer"
+              >{{ l }}</a>
+              <a v-else href="#">{{ l }}</a>
             </li>
           </ul>
         </div>

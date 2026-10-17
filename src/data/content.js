@@ -57,4 +57,7 @@ export const footer = {
     { title: 'Get involved', links: ['Ways to give', 'Email updates', 'Host an event', 'Shop', 'Careers', 'Volunteer', 'Contact us'] },
     { title: 'Stay connected', links: ['Instagram', 'YouTube', 'Facebook', 'LinkedIn', 'X'] },
   ],
+  linkUrls: {
+    Facebook: 'https://web.facebook.com/homeallvillage/',
+  },
 }

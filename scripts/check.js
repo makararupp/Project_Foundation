@@ -47,9 +47,9 @@ for (const file of sourceFiles) {
   }
 }
 
-// 3. Every milestone in MissionView has its required text in every language
-const missionView = readFileSync('src/views/MissionView.vue', 'utf8')
-for (const [, id] of missionView.matchAll(/id:\s*'(m\d+)'/g)) {
+// 3. Every milestone in milestones.js has its required text in every language
+const milestonesFile = readFileSync('src/features/mission/milestones.js', 'utf8')
+for (const [, id] of milestonesFile.matchAll(/id:\s*'(m\d+)'/g)) {
   for (const lang of LOCALES) {
     for (const field of ['subtitle', 'p1']) {
       if (!keys[lang].has(`mission.milestones.${id}.${field}`)) {
