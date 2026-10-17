@@ -33,7 +33,7 @@ nav a:hover { border-color: var(--sun); }
 }
 .hero h1 .swap {
   display: block;
-  color: #a8f0c6;
+  color: inherit;
   min-height: 1.25em;
   margin-top: 4px;
 }
