@@ -21,7 +21,7 @@ const { t } = useI18n()
           {{ t('mission.text1') }}
           <em class="keyword">{{ t('mission.learn') }}</em>,
           <em class="keyword">{{ t('mission.lead') }}</em>,
-          {{ t('mission.text1').includes('help') ? 'and' : 'និង' }}
+          {{ t('mission.and') }}
           <em class="keyword">{{ t('mission.connect') }}</em>
           {{ t('mission.text2') }}
         </p>

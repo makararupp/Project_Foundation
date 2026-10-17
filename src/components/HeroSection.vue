@@ -43,7 +43,7 @@ onUnmounted(() => clearInterval(timer))
       <div>
         <span class="tag">{{ t('hero.tag') }}</span>
         <h1>
-          <span class="rgb-title">{{ t('hero.title') }}</span>
+          {{ t('hero.title') }}
           <span class="swap" aria-live="off">
             <span :key="`${index}-${heroWords[index]}`">{{ heroWords[index] }}</span>
           </span>
@@ -110,37 +110,6 @@ onUnmounted(() => clearInterval(timer))
   margin-top: 6px;
 }
 
-/* ── Animated RGB Title Effect ── */
-.rgb-title {
-  display: inline;
-  background: linear-gradient(
-    90deg,
-    #ff007f 0%,
-    #ff3b30 15%,
-    #ff9500 30%,
-    #ffd60a 45%,
-    #34c759 60%,
-    #00c7be 75%,
-    #30b0c7 85%,
-    #5856d6 95%,
-    #af52de 100%,
-    #ff007f 110%
-  );
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: rgb-shift 6s linear infinite;
-  text-shadow: 0 0 35px rgba(255, 255, 255, 0.25);
-}
-
-@keyframes rgb-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
-}
 
 @media (max-width: 900px) {
   .hero-content { min-height: 460px; padding-top: 60px; padding-bottom: 60px; }

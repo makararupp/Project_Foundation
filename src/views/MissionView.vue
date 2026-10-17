@@ -31,45 +31,49 @@
         </blockquote>
       </div>
 
-      <!-- Feature Milestone Story (Exact match to Gates Notes layout) -->
-      <section class="feature-story">
+      <!-- Feature Milestone Stories: one section per entry in `milestones` (see script below) -->
+      <section v-for="m in milestones" :key="m.id" class="feature-story">
         <div class="feature-top-bar"></div>
 
         <div class="editorial-grid">
           <!-- Row 1: Left Milestone Header & Right Intro Paragraphs -->
           <div class="grid-left-header">
-            <h2 class="feature-date">{{ t('mission.story.date') }}</h2>
-            <p class="feature-subtitle">{{ t('mission.story.subtitle') }}</p>
+            <h2 class="feature-date">{{ storyDate(m.year, m.month) }}</h2>
+            <p class="feature-subtitle">{{ t(`mission.milestones.${m.id}.subtitle`) }}</p>
           </div>
           <div class="grid-right-intro">
-            <p v-html="t('mission.story.p1')"></p>
-            <p v-html="t('mission.story.p2')"></p>
+            <p v-html="t(`mission.milestones.${m.id}.p1`)"></p>
+            <p v-if="te(`mission.milestones.${m.id}.p2`)" v-html="t(`mission.milestones.${m.id}.p2`)"></p>
           </div>
 
-          <!-- Row 2: Left Portrait & Right Magazine Cover -->
-          <div class="grid-left-media">
-            <figure class="portrait-figure">
-              <img src="/images/paul-and-me.png" alt="Paul Allen and Bill Gates" class="portrait-img" />
-              <figcaption class="portrait-caption">{{ t('mission.story.caption') }}</figcaption>
-            </figure>
-          </div>
-          <div class="grid-right-media">
-            <figure class="magazine-figure">
-              <img src="/images/altair-popular-electronics.png" alt="Popular Electronics Altair 8800" class="magazine-img" />
-            </figure>
-          </div>
-
-          <!-- Row 3: Empty Left & Right Continuation with Callout -->
-          <div class="grid-left-empty" aria-hidden="true"></div>
-          <div class="grid-right-continuation">
-            <p class="story-p">{{ t('mission.story.p3') }}</p>
-
-            <div class="story-callout">
-              <p class="callout-text">{{ t('mission.story.callout') }}</p>
+          <!-- Row 2: Left Portrait & Right Wide Image (optional) -->
+          <template v-if="m.portrait || m.image">
+            <div class="grid-left-media">
+              <figure v-if="m.portrait" class="portrait-figure">
+                <img :src="m.portrait" :alt="m.portraitAlt" class="portrait-img" />
+                <figcaption class="portrait-caption">{{ t(`mission.milestones.${m.id}.caption`) }}</figcaption>
+              </figure>
             </div>
+            <div class="grid-right-media">
+              <figure v-if="m.image" class="magazine-figure">
+                <img :src="m.image" :alt="m.imageAlt" class="magazine-img" />
+              </figure>
+            </div>
+          </template>
 
-            <p class="story-p">{{ t('mission.story.p4') }}</p>
-          </div>
+          <!-- Row 3: Empty Left & Right Continuation with Callout (optional) -->
+          <template v-if="te(`mission.milestones.${m.id}.p3`) || te(`mission.milestones.${m.id}.callout`)">
+            <div class="grid-left-empty" aria-hidden="true"></div>
+            <div class="grid-right-continuation">
+              <p v-if="te(`mission.milestones.${m.id}.p3`)" class="story-p">{{ t(`mission.milestones.${m.id}.p3`) }}</p>
+
+              <div v-if="te(`mission.milestones.${m.id}.callout`)" class="story-callout">
+                <p class="callout-text">{{ t(`mission.milestones.${m.id}.callout`) }}</p>
+              </div>
+
+              <p v-if="te(`mission.milestones.${m.id}.p4`)" class="story-p">{{ t(`mission.milestones.${m.id}.p4`) }}</p>
+            </div>
+          </template>
         </div>
       </section>
     </article>
@@ -79,7 +83,33 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
-const { t, locale } = useI18n()
+const { t, te, locale } = useI18n()
+
+// Milestone stories, shown in this order. Each `id` matches `mission.milestones.<id>` in the locale files.
+// Change `year` and `month` (1–12) here; `portrait` and `image` are optional.
+const milestones = [
+  {
+    id: 'm1', year: 1974, month: 12,
+    portrait: '/images/paul-and-me.png', portraitAlt: 'Paul Allen and Bill Gates',
+    image: '/images/altair-popular-electronics.png', imageAlt: 'Popular Electronics Altair 8800',
+  },
+  { id: 'm2', year: 1975, month: 1 },
+  { id: 'm3', year: 1975, month: 2 },
+  { id: 'm4', year: 1975, month: 3 },
+  { id: 'm5', year: 1975, month: 4 },
+  { id: 'm6', year: 1975, month: 5 },
+  { id: 'm7', year: 1975, month: 6 },
+]
+
+// Formats a milestone date in the current language, e.g. storyDate(1974, 12) → "December 1974"
+const storyDate = (year, month) => {
+  const date = new Date(year, month - 1)
+  if (locale.value === 'km') {
+    const fmt = (opts) => new Intl.DateTimeFormat('km-u-nu-khmr', opts).format(date)
+    return `ខែ${fmt({ month: 'long' })} ឆ្នាំ ${fmt({ year: 'numeric' })}`
+  }
+  return new Intl.DateTimeFormat(locale.value, { year: 'numeric', month: 'long' }).format(date)
+}
 </script>
 
 <style scoped>
