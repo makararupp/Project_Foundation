@@ -75,9 +75,9 @@ const open = ref(false)
 const langDropdownOpen = ref(false)
 
 const languages = [
-  { code: 'en', label: 'EN', name: 'English', flag: '🇺🇸' },
-  { code: 'km', label: 'KH', name: 'ខ្មែរ (Khmer)', flag: '🇰🇭' },
-  { code: 'zh', label: 'CN', name: '中文 (Chinese)', flag: '🇨🇳' },
+  { code: 'en', label: 'EN'},
+  { code: 'km', label: 'KH'},
+  { code: 'zh', label: 'CN'},
 ]
 
 const currentLang = computed(() => {
