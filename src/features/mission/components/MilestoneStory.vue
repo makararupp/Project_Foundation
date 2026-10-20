@@ -150,7 +150,7 @@ const has = (field) => te(key(field))
 }
 
 .feature-date {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 25px;
   font-weight: 800;
   color: var(--ink);
@@ -160,8 +160,8 @@ const has = (field) => te(key(field))
 }
 
 .feature-subtitle {
-  font-family: var(--sans);
-  font-size: 17px;
+  font-family: var(--serif);
+  font-size: 20px;
   font-weight: 500;
   color: #64748b;
   line-height: 1.35;
@@ -171,7 +171,7 @@ const has = (field) => te(key(field))
 .grid-right-intro p,
 .grid-right-continuation p {
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.7;
   color: var(--ink);
   margin: 0 0 18px 0;
@@ -195,7 +195,7 @@ const has = (field) => te(key(field))
 
 .column-body p {
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.7;
   color: var(--ink);
   margin: 0 0 18px 0;
@@ -215,7 +215,7 @@ const has = (field) => te(key(field))
 }
 
 .column-caption {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 12px;
   font-weight: 500;
   color: #64748b;
@@ -252,7 +252,7 @@ const has = (field) => te(key(field))
 
 .photo-body p {
   font-family: var(--serif);
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.7;
   color: var(--ink);
   margin: 0 0 18px 0;
@@ -309,7 +309,7 @@ const has = (field) => te(key(field))
 }
 
 .portrait-caption {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 12px;
   font-weight: 500;
   color: #64748b;
@@ -340,7 +340,7 @@ const has = (field) => te(key(field))
 }
 
 .callout-text {
-  font-family: var(--sans) !important;
+  font-family: var(--serif) !important;
   font-size: clamp(22px, 2.5vw, 27px) !important;
   font-weight: 700 !important;
   line-height: 1.32 !important;

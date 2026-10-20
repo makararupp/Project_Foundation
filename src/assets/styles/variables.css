@@ -15,7 +15,7 @@
   --on-ink: #fbfaf7;
 
   /* Typography */
-  --serif: "Fraunces", "Battambang", Georgia, "Times New Roman", serif;
+  --serif: "Cormorant Garamond", "Battambang", Georgia, "Times New Roman", serif;
   --sans:  "Instrument Sans", "Kantumruy Pro", "Inter", "Siemreap", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   --font-khmer: "Kantumruy Pro", "Inter", "Siemreap", sans-serif;
   --font-khmer-heading: "Battambang", "Kantumruy Pro", "Siemreap", serif;

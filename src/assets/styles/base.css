@@ -6,6 +6,7 @@ html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smoot
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 img, svg { max-width: 100%; display: block; }
 a { color: inherit; }
+p { font-family: var(--serif); font-size: 20px; }
 :focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 4px; }
 
 /* Skip to content (accessibility) */
@@ -28,7 +29,8 @@ html[lang="km"],
   line-height: 1.8;
 }
 
-html[lang="km"] body {
+html[lang="km"] body,
+html[lang="km"] p {
   font-family: var(--sans);
 }
 
