@@ -4,8 +4,8 @@ import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
 const visitImages = [
-  { src: '/images/visit1.jpg', alt: 'The campus' },
-  { src: '/images/visit2.jpg', alt: 'The museum' },
+  { src: '/images/campus.jpg', alt: 'The campus' },
+  { src: '/images/museum.jpg', alt: 'The museum' },
 ]
 </script>
 
