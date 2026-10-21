@@ -107,7 +107,7 @@ export default {
   },
   footer: {
     visit: 'Visit',
-    address: ['100 Example Avenue', 'Sample City, ST 00000'],
+    address: ['Tolaka St, Krong Siem Reap 171201'],
     hours: [
       { name: 'Campus', lines: ['Daily, 6 a.m. – 9 p.m.'] },
       { name: 'Museum', lines: ['Mon 1–8 p.m.', 'Tue–Sun 10 a.m. – 5 p.m.'] },
