@@ -107,7 +107,7 @@ export default {
   },
   footer: {
     visit: '参观指南',
-    address: ['100 示例大道', '金边市，柬埔寨'],
+    address: ['Tolaka 街，暹粒市 171201'],
     hours: [
       { name: '园区', lines: ['每日 上午 6:00 – 晚上 9:00'] },
       { name: '博物馆', lines: ['周一 下午 1:00 – 晚上 8:00', '周二至周日 上午 10:00 – 下午 5:00'] },
