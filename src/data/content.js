@@ -45,8 +45,8 @@ export const programs = [
 
 export const footer = {
   address: ['100 Example Avenue', 'Sample City, ST 00000'],
-  phone: '1-(000)-000-0000',
-  phoneHref: 'tel:+10000000000',
+  phone: '098 788 789',
+  phoneHref: 'tel:+85598788789',
   hours: [
     { name: 'Campus', lines: ['Daily, 6 a.m. – 9 p.m.'] },
     { name: 'Museum', lines: ['Mon 1–8 p.m.', 'Tue–Sun 10 a.m. – 5 p.m.'] },
