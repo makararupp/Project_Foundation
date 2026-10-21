@@ -6,10 +6,10 @@ const { t, tm } = useI18n()
 
 const storyImages = [
   { src: '/images/hero.jpg',   alt: 'Featured story' },
-  { src: '/images/ex1.jpg',    alt: 'Story' },
-  { src: '/images/ex2.jpg',    alt: 'Story' },
-  { src: '/images/visit1.jpg', alt: 'Story' },
-  { src: '/images/ex3.jpg',    alt: 'Story' },
+  { src: '/images/farmer.jpg',    alt: 'Story' },
+  { src: '/images/young.jpg',    alt: 'Story' },
+  { src: '/images/summer.jpg', alt: 'Story' },
+  { src: '/images/map.jpg',    alt: 'Story' },
 ]
 
 // Dynamically get translated stories based on current locale
@@ -20,7 +20,7 @@ const translatedStories = computed(() => {
 </script>
 
 <template>
-  <section id="stories" style="padding-top:0">
+  <section id="stories" style="padding-top:28px">
     <div class="wrap">
       <div class="sec-head">
         <h2>{{ t('stories.heading') }}</h2>
