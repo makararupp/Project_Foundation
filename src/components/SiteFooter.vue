@@ -19,13 +19,14 @@
             </template>
           </dl>
         </div>
-        <div v-for="col in footerColumns" :key="col.title">
+        <div v-for="(col, ci) in footerColumns" :key="col.title">
           <h4>{{ col.title }}</h4>
           <ul>
-            <li v-for="l in col.links" :key="l">
+            <li v-for="(l, li) in col.links" :key="l">
+              <router-link v-if="linkUrl(ci, li)?.startsWith('/')" :to="linkUrl(ci, li)">{{ l }}</router-link>
               <a
-                v-if="footer.linkUrls[l]"
-                :href="footer.linkUrls[l]"
+                v-else-if="linkUrl(ci, li)"
+                :href="linkUrl(ci, li)"
                 target="_blank"
                 rel="noopener noreferrer"
               >{{ l }}</a>
@@ -70,4 +71,11 @@ const footerColumns = computed(() => {
   const cols = tm('footer.columns')
   return Array.isArray(cols) ? cols : footer.columns
 })
+
+// Look up the URL by the English link name at the same position,
+// so translated links (km, zh) still find their URL.
+function linkUrl(ci, li) {
+  const name = footer.columns[ci]?.links[li]
+  return name ? footer.linkUrls[name] : undefined
+}
 </script>

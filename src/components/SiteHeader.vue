@@ -19,7 +19,7 @@
           <li><router-link to="/#stories">{{ t('nav.stories') }}</router-link></li>
           <li><router-link to="/mission" class="nav-mission-link">{{ t('nav.mission') }}</router-link></li>
           <li><router-link to="/#programs">{{ t('nav.programs') }}</router-link></li>
-          <li><router-link to="/#footer">{{ t('nav.about') }}</router-link></li>
+          <li><router-link to="/about">{{ t('nav.about') }}</router-link></li>
 
       
           <li class="lang-dropdown" @click.stop>

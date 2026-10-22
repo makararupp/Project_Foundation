@@ -57,7 +57,11 @@ export const footer = {
     { title: 'Get involved', links: ['Ways to give', 'Email updates', 'Host an event', 'Shop', 'Careers', 'Volunteer', 'Contact us'] },
     { title: 'Stay connected', links: ['Instagram', 'YouTube', 'Facebook', 'LinkedIn', 'X'] },
   ],
+  // Keyed by the English link name above; works in every language.
+  // Paths starting with "/" open inside the site, full URLs open in a new tab.
   linkUrls: {
+    About: '/about',
+    'Mission and values': '/mission',
     Facebook: 'https://web.facebook.com/homeallvillage/',
   },
 }

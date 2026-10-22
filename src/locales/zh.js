@@ -1,4 +1,5 @@
 import mission from '../features/mission/locales/zh.js'
+import about from '../features/about/locales/zh.js'
 
 export default {
   nav: {
@@ -38,6 +39,7 @@ export default {
     item3Link: '探索会员权益',
   },
   mission,
+  about,
   stories: {
     heading: '来自领袖与邻里的故事。',
     viewAll: '查看所有故事',

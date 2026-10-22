@@ -1,4 +1,5 @@
 import mission from '../features/mission/locales/km.js'
+import about from '../features/about/locales/km.js'
 
 export default {
   nav: {
@@ -38,6 +39,7 @@ export default {
     item3Link: 'ស្វែងយល់អំពីសមាជិកភាព',
   },
   mission,
+  about,
   stories: {
     heading: 'រឿងរ៉ាវពីអ្នកដឹកនាំ និងអ្នកជិតខាង។',
     viewAll: 'មើលរឿងរ៉ាវទាំងអស់',

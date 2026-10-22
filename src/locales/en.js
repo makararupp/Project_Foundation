@@ -1,4 +1,5 @@
 import mission from '../features/mission/locales/en.js'
+import about from '../features/about/locales/en.js'
 
 export default {
   nav: {
@@ -38,6 +39,7 @@ export default {
     item3Link: 'Explore membership',
   },
   mission,
+  about,
   stories: {
     heading: 'Stories from leaders and neighbors.',
     viewAll: 'View all stories',
