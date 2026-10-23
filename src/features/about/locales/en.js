@@ -3,10 +3,13 @@ export default {
   tag: 'About us',
   title: 'About the SOTHEARITH Foundation',
   lede: 'We believe every community holds the power to shape its own future. Our job is to give people the tools, trust, and resources to do it.',
+  videoTitle: 'About the SOTHEARITH Foundation',
+  videoLabel: 'Watch the video',
 
   missionLabel: 'Our mission',
   mission: 'Our mission is to help people learn, lead, and connect so they can improve the places they call home.',
   missionLink: 'Read our full mission',
+  missionImageAlt: 'Children making crafts together at a foundation event',
 
   storyHeading: 'Our story',
   story: [

@@ -3,10 +3,13 @@ export default {
   tag: '关于我们',
   title: '关于 SOTHEARITH 基金会',
   lede: '我们相信，每个社区都有塑造自己未来的力量。我们的工作，就是为人们提供实现这一目标的工具、信任与资源。',
+  videoTitle: '关于 SOTHEARITH 基金会',
+  videoLabel: '观看视频',
 
   missionLabel: '我们的使命',
   mission: '我们的使命是帮助人们学习、领导与连接，让他们能够改善自己的家园。',
   missionLink: '阅读完整使命',
+  missionImageAlt: '孩子们在基金会活动中一起做手工',
 
   storyHeading: '我们的故事',
   story: [
