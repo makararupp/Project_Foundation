@@ -287,7 +287,8 @@ const address = computed(() => {
 
 /* Mission */
 .about-mission {
-  background: var(--sky);
+  background: var(--surface);
+  border-block: 1px solid var(--line);
 }
 
 .eyebrow {
@@ -298,6 +299,18 @@ const address = computed(() => {
   text-transform: uppercase;
   color: var(--leaf);
   margin-bottom: 20px !important;
+}
+
+/* Our story */
+.about-story {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+/* What guides us */
+.about-values {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
 }
 
 /* Text on the left, photo on the right, both centered vertically */
@@ -400,7 +413,8 @@ const address = computed(() => {
 
 /* Home */
 .about-home {
-  background: var(--sky);
+  background: var(--surface);
+  border-block: 1px solid var(--line);
 }
 
 .about-home address {
