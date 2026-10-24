@@ -2,6 +2,10 @@ import mission from '../features/mission/locales/zh.js'
 import about from '../features/about/locales/zh.js'
 import leadership from '../features/leadership/locales/zh.js'
 import press from '../features/press/locales/zh.js'
+import faq from '../features/faq/locales/zh.js'
+import donatePage from '../features/donate/locales/zh.js'
+import financials from '../features/financials/locales/zh.js'
+import terms from '../features/terms/locales/zh.js'
 
 export default {
   nav: {
@@ -44,6 +48,10 @@ export default {
   about,
   leadership,
   press,
+  faq,
+  donatePage,
+  financials,
+  terms,
   stories: {
     heading: '来自领袖与邻里的故事。',
     viewAll: '查看所有故事',

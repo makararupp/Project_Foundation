@@ -9,8 +9,18 @@
         SOTHEARITH FOUNDATION
       </router-link>
 
-      <button class="menu-toggle" :aria-expanded="open" aria-controls="primary-nav" @click="open = !open">
-        Menu
+      <button
+        class="menu-toggle"
+        :class="{ 'is-open': open }"
+        :aria-expanded="open"
+        aria-controls="primary-nav"
+        aria-label="Menu"
+        @click="open = !open"
+      >
+        <!-- Three lines (☰); the lines turn into ✕ when the menu is open -->
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </button>
 
       <nav id="primary-nav" aria-label="Primary" :class="{ open }" @click="open = false">
@@ -60,7 +70,7 @@
         </ul>
       </nav>
 
-      <a class="btn header-cta" href="#donate">{{ t('nav.donate') }}</a>
+      <router-link class="btn header-cta" to="/donate">{{ t('nav.donate') }}</router-link>
     </div>
   </header>
 </template>
@@ -107,6 +117,33 @@ onUnmounted(() => window.removeEventListener('click', handleClickOutside))
 </script>
 
 <style scoped>
+/* Drawer icon: display is controlled in layout.css (shown only on small screens) */
+.menu-toggle {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.menu-toggle .bar {
+  position: absolute;
+  left: 11px;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 0.25s ease, opacity 0.2s ease, top 0.25s ease;
+}
+
+.menu-toggle .bar:nth-child(1) { top: 14px; }
+.menu-toggle .bar:nth-child(2) { top: 20px; }
+.menu-toggle .bar:nth-child(3) { top: 26px; }
+
+.menu-toggle.is-open .bar:nth-child(1) { top: 20px; transform: rotate(45deg); }
+.menu-toggle.is-open .bar:nth-child(2) { opacity: 0; }
+.menu-toggle.is-open .bar:nth-child(3) { top: 20px; transform: rotate(-45deg); }
+
 .lang-dropdown {
   position: relative;
   display: flex;

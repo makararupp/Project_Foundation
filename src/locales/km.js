@@ -2,6 +2,10 @@ import mission from '../features/mission/locales/km.js'
 import about from '../features/about/locales/km.js'
 import leadership from '../features/leadership/locales/km.js'
 import press from '../features/press/locales/km.js'
+import faq from '../features/faq/locales/km.js'
+import donatePage from '../features/donate/locales/km.js'
+import financials from '../features/financials/locales/km.js'
+import terms from '../features/terms/locales/km.js'
 
 export default {
   nav: {
@@ -44,6 +48,10 @@ export default {
   about,
   leadership,
   press,
+  faq,
+  donatePage,
+  financials,
+  terms,
   stories: {
     heading: 'រឿងរ៉ាវពីអ្នកដឹកនាំ និងអ្នកជិតខាង។',
     viewAll: 'មើលរឿងរ៉ាវទាំងអស់',

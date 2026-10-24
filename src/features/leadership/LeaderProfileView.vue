@@ -60,7 +60,7 @@ const bio = computed(() => {
 }
 
 .profile-head h1 {
-  font-family: var(--sans);
+  font-family: var(--condensed);
   font-size: clamp(40px, 5.6vw, 72px);
   font-weight: 800;
   line-height: 1.05;
@@ -69,6 +69,7 @@ const bio = computed(() => {
 }
 
 .back-link {
+  font-family: var(--condensed);
   font-weight: 700;
   font-size: 20px;
   text-decoration: none;

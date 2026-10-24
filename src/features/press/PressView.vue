@@ -45,7 +45,7 @@ const { t } = useI18n()
 }
 
 .press-head h1 {
-  font-family: var(--sans);
+  font-family: var(--condensed);
   font-size: clamp(44px, 6.4vw, 84px);
   font-weight: 800;
   line-height: 1.05;
@@ -64,7 +64,8 @@ const { t } = useI18n()
   display: inline-block;
   border: 1.5px solid var(--ink);
   padding: 8px 16px;
-  font-size: 15px;
+  font-family: var(--condensed);
+  font-size: 16px;
   font-weight: 700;
   text-decoration: none;
   transition: background 0.2s ease, color 0.2s ease;
@@ -83,7 +84,7 @@ const { t } = useI18n()
 }
 
 .resources h2 {
-  font-family: var(--sans);
+  font-family: var(--condensed);
   font-size: 28px;
   font-weight: 800;
   margin: 0;
@@ -104,7 +105,7 @@ const { t } = useI18n()
 }
 
 .resource h3 {
-  font-family: var(--sans);
+  font-family: var(--condensed);
   font-size: 19px;
   font-weight: 700;
   line-height: 1.3;
@@ -112,6 +113,8 @@ const { t } = useI18n()
 }
 
 .learn-more {
+  font-family: var(--condensed);
+  font-size: 19px;
   font-weight: 700;
   text-decoration: none;
 }

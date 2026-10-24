@@ -20,6 +20,8 @@
   --font-khmer: "Kantumruy Pro", "Inter", "Siemreap", sans-serif;
   --font-khmer-heading: "Battambang", "Kantumruy Pro", "Siemreap", serif;
   --mono:  "Roboto Mono", monospace;
+  /* Tall, narrow bold headings (Financials, FAQ, Press, Leadership pages) */
+  --condensed: "Barlow Condensed", "Kantumruy Pro", "Inter", "Siemreap", system-ui, sans-serif;
 
   /* Hero title scale */
   --hero-title-size: clamp(40px, 6vw, 84px);

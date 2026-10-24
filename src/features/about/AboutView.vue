@@ -123,8 +123,8 @@ import { footer } from '../../data/content.js'
 
 const { t, tm } = useI18n()
 
-// YouTube video ID, from https://youtu.be/SZCNEYTzajs
-const videoId = 'SZCNEYTzajs'
+// YouTube video ID, from https://youtu.be/4dP6NUlXe-4
+const videoId = '4dP6NUlXe-4'
 const playing = ref(false)
 
 const asList = (key) => {

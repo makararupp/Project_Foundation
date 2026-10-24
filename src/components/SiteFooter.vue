@@ -40,7 +40,7 @@
         <span>© {{ year }} {{ siteName }}.</span>
         <nav aria-label="Legal">
           <ul>
-            <li><a href="#">{{ t('footer.terms') }}</a></li>
+            <li><router-link to="/terms">{{ t('footer.terms') }}</router-link></li>
             <li><a href="#">{{ t('footer.privacy') }}</a></li>
           </ul>
         </nav>
@@ -83,5 +83,10 @@ function linkUrl(ci, li) {
 footer {
   background: var(--surface);
   border-block: 1px solid var(--line);
+}
+
+/* Terms of service / Privacy policy: only the yellow line on hover, no extra underline */
+.legal a:hover {
+  text-decoration: none;
 }
 </style>

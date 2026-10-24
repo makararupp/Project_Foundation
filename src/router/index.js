@@ -5,6 +5,10 @@ import AboutView from '../features/about/AboutView.vue'
 import LeadershipView from '../features/leadership/LeadershipView.vue'
 import LeaderProfileView from '../features/leadership/LeaderProfileView.vue'
 import PressView from '../features/press/PressView.vue'
+import FaqView from '../features/faq/FaqView.vue'
+import DonateView from '../features/donate/DonateView.vue'
+import FinancialsView from '../features/financials/FinancialsView.vue'
+import TermsView from '../features/terms/TermsView.vue'
 
 const routes = [
   {
@@ -37,6 +41,26 @@ const routes = [
     path: '/press',
     name: 'press',
     component: PressView,
+  },
+  {
+    path: '/faq',
+    name: 'faq',
+    component: FaqView,
+  },
+  {
+    path: '/donate',
+    name: 'donate',
+    component: DonateView,
+  },
+  {
+    path: '/financials',
+    name: 'financials',
+    component: FinancialsView,
+  },
+  {
+    path: '/terms',
+    name: 'terms',
+    component: TermsView,
   },
 ]
 

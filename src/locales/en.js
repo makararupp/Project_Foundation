@@ -2,6 +2,10 @@ import mission from '../features/mission/locales/en.js'
 import about from '../features/about/locales/en.js'
 import leadership from '../features/leadership/locales/en.js'
 import press from '../features/press/locales/en.js'
+import faq from '../features/faq/locales/en.js'
+import donatePage from '../features/donate/locales/en.js'
+import financials from '../features/financials/locales/en.js'
+import terms from '../features/terms/locales/en.js'
 
 export default {
   nav: {
@@ -44,6 +48,10 @@ export default {
   about,
   leadership,
   press,
+  faq,
+  donatePage,
+  financials,
+  terms,
   stories: {
     heading: 'Stories from leaders and neighbors.',
     viewAll: 'View all stories',
