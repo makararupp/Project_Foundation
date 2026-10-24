@@ -6,6 +6,7 @@ import faq from '../features/faq/locales/km.js'
 import donatePage from '../features/donate/locales/km.js'
 import financials from '../features/financials/locales/km.js'
 import terms from '../features/terms/locales/km.js'
+import privacy from '../features/privacy/locales/km.js'
 
 export default {
   nav: {
@@ -52,6 +53,7 @@ export default {
   donatePage,
   financials,
   terms,
+  privacy,
   stories: {
     heading: 'រឿងរ៉ាវពីអ្នកដឹកនាំ និងអ្នកជិតខាង។',
     viewAll: 'មើលរឿងរ៉ាវទាំងអស់',

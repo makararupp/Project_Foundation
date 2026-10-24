@@ -41,7 +41,7 @@
         <nav aria-label="Legal">
           <ul>
             <li><router-link to="/terms">{{ t('footer.terms') }}</router-link></li>
-            <li><a href="#">{{ t('footer.privacy') }}</a></li>
+            <li><router-link to="/privacy">{{ t('footer.privacy') }}</router-link></li>
           </ul>
         </nav>
       </div>

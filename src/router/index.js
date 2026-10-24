@@ -9,6 +9,7 @@ import FaqView from '../features/faq/FaqView.vue'
 import DonateView from '../features/donate/DonateView.vue'
 import FinancialsView from '../features/financials/FinancialsView.vue'
 import TermsView from '../features/terms/TermsView.vue'
+import PrivacyView from '../features/privacy/PrivacyView.vue'
 
 const routes = [
   {
@@ -61,6 +62,11 @@ const routes = [
     path: '/terms',
     name: 'terms',
     component: TermsView,
+  },
+  {
+    path: '/privacy',
+    name: 'privacy',
+    component: PrivacyView,
   },
 ]
 

@@ -6,6 +6,7 @@ import faq from '../features/faq/locales/en.js'
 import donatePage from '../features/donate/locales/en.js'
 import financials from '../features/financials/locales/en.js'
 import terms from '../features/terms/locales/en.js'
+import privacy from '../features/privacy/locales/en.js'
 
 export default {
   nav: {
@@ -52,6 +53,7 @@ export default {
   donatePage,
   financials,
   terms,
+  privacy,
   stories: {
     heading: 'Stories from leaders and neighbors.',
     viewAll: 'View all stories',
