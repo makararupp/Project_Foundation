@@ -5,11 +5,11 @@
         <div>
           <div class="sec-head">
             <h2>{{ t('programs.heading') }}</h2>
-            <router-link class="link" to="/programs">{{ t('programs.viewAll') }}</router-link>
+            <router-link class="link" to="/programs#all-programs">{{ t('programs.viewAll') }}</router-link>
           </div>
           <ul class="programs-list">
             <li v-for="item in translatedPrograms" :key="item.name">
-              <router-link to="/programs">
+              <router-link to="/programs#all-programs">
                 {{ item.name }}
                 <span>{{ item.tag }}</span>
               </router-link>

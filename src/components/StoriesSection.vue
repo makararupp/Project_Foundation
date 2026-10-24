@@ -1,16 +1,9 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import StoryCard from '../features/stories/components/StoryCard.vue'
 
 const { t, tm } = useI18n()
-
-const storyImages = [
-  { src: '/images/hero.jpg',   alt: 'Featured story' },
-  { src: '/images/farmer.jpg',    alt: 'Story' },
-  { src: '/images/young.jpg',    alt: 'Story' },
-  { src: '/images/summer.jpg', alt: 'Story' },
-  { src: '/images/map.jpg',    alt: 'Story' },
-]
 
 // Dynamically get translated stories based on current locale
 const translatedStories = computed(() => {
@@ -24,19 +17,10 @@ const translatedStories = computed(() => {
     <div class="wrap">
       <div class="sec-head">
         <h2>{{ t('stories.heading') }}</h2>
-        <a class="link" href="#">{{ t('stories.viewAll') }}</a>
+        <router-link class="link" to="/stories">{{ t('stories.viewAll') }}</router-link>
       </div>
       <div class="stories-grid">
-        <article v-for="(story, i) in translatedStories" :key="i" class="story">
-          <div class="ph story-ph" :class="{ 'story-ph--wide': i === 0 }">
-            <img :src="storyImages[i] ? storyImages[i].src : storyImages[0].src" :alt="story.title" class="story-img" />
-          </div>
-          <div class="cats">
-            <span v-for="c in story.cats" :key="c">{{ c }}</span>
-          </div>
-          <h3><a href="#">{{ story.title }}</a></h3>
-          <p>{{ story.text }}</p>
-        </article>
+        <StoryCard v-for="(story, i) in translatedStories" :key="i" :story="story" :index="i" :wide="i === 0" />
       </div>
     </div>
   </section>
@@ -47,22 +31,4 @@ const translatedStories = computed(() => {
   background: var(--surface);
   border-block: 1px solid var(--line);
 }
-.story-ph {
-  overflow: hidden;
-  border-radius: 14px;
-  margin-bottom: 16px;
-  background: var(--sky);
-  cursor: pointer;
-  aspect-ratio: 4 / 3;
-}
-.story-ph--wide { aspect-ratio: 16 / 9; }
-.story-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform 0.4s ease;
-}
-.story-ph:hover .story-img { transform: scale(1.04); }
 </style>

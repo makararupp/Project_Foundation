@@ -15,18 +15,18 @@ const visitImages = [
       <div class="sec-head"><h2>{{ t('visit.heading') }}</h2></div>
       <div class="two">
         <article>
-          <div class="ph visit-ph">
+          <router-link to="/campus" class="ph visit-ph" tabindex="-1" aria-hidden="true">
             <img :src="visitImages[0].src" :alt="visitImages[0].alt" class="visit-img" />
-          </div>
+          </router-link>
           <h3>{{ t('visit.theCampus') }}</h3>
           <p>{{ t('visit.theCampusText') }}</p>
           <router-link class="link" to="/campus">{{ t('visit.theCampusLink') }}</router-link>
         </article>
 
         <article>
-          <div class="ph visit-ph">
+          <router-link to="/museum" class="ph visit-ph" tabindex="-1" aria-hidden="true">
             <img :src="visitImages[1].src" :alt="visitImages[1].alt" class="visit-img" />
-          </div>
+          </router-link>
           <h3>{{ t('visit.theMuseum') }}</h3>
           <p>{{ t('visit.theMuseumText') }}</p>
           <router-link class="link" to="/museum">{{ t('visit.theMuseumLink') }}</router-link>
@@ -42,6 +42,7 @@ const visitImages = [
   border-block: 1px solid var(--line);
 }
 .visit-ph {
+  display: block; /* photo is a link to the Campus / Museum page */
   overflow: hidden;
   border-radius: 14px;
   margin-bottom: 20px;

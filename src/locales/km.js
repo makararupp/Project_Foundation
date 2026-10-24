@@ -11,6 +11,11 @@ import campus from '../features/campus/locales/km.js'
 import museum from '../features/museum/locales/km.js'
 import programsPage from '../features/programs/locales/km.js'
 import volunteer from '../features/volunteer/locales/km.js'
+import storiesPage from '../features/stories/locales/km.js'
+import give from '../features/give/locales/km.js'
+import host from '../features/host/locales/km.js'
+import shop from '../features/shop/locales/km.js'
+import contact from '../features/contact/locales/km.js'
 
 export default {
   nav: {
@@ -62,6 +67,11 @@ export default {
   museum,
   programsPage,
   volunteer,
+  storiesPage,
+  give,
+  host,
+  shop,
+  contact,
   stories: {
     heading: 'រឿងរ៉ាវពីអ្នកដឹកនាំ និងអ្នកជិតខាង។',
     viewAll: 'មើលរឿងរ៉ាវទាំងអស់',
@@ -144,11 +154,11 @@ export default {
       },
       {
         title: 'ចូលរួមជាមួយយើង',
-        links: ['វិធីសាស្រ្តបរិច្ចាគ', 'ការអាប់ដេតតាមអ៊ីមែល', 'រៀបចំព្រឹត្តិការណ៍', 'ហាងទំនិញ', 'ឱកាសការងារ', 'ការងារស្ម័គ្រចិត្ត', 'ទំនាក់ទំនងមកយើង']
+        links: ['វិធីសាស្រ្តបរិច្ចាគ', 'រៀបចំព្រឹត្តិការណ៍', 'ហាងទំនិញ', 'ការងារស្ម័គ្រចិត្ត', 'ទំនាក់ទំនងមកយើង']
       },
       {
         title: 'បណ្តាញសង្គម',
-        links: ['Instagram', 'YouTube', 'Facebook', 'LinkedIn', 'X']
+        links: ['Instagram', 'YouTube', 'Facebook', 'LinkedIn']
       },
     ],
     note: 'ខ្លឹមសារគំរូ។ សូមជំនួសដោយអត្ថបទ រូបភាព និងតំណភ្ជាប់ពិតប្រាកដរបស់អ្នក។',

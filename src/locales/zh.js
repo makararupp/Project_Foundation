@@ -11,6 +11,11 @@ import campus from '../features/campus/locales/zh.js'
 import museum from '../features/museum/locales/zh.js'
 import programsPage from '../features/programs/locales/zh.js'
 import volunteer from '../features/volunteer/locales/zh.js'
+import storiesPage from '../features/stories/locales/zh.js'
+import give from '../features/give/locales/zh.js'
+import host from '../features/host/locales/zh.js'
+import shop from '../features/shop/locales/zh.js'
+import contact from '../features/contact/locales/zh.js'
 
 export default {
   nav: {
@@ -62,6 +67,11 @@ export default {
   museum,
   programsPage,
   volunteer,
+  storiesPage,
+  give,
+  host,
+  shop,
+  contact,
   stories: {
     heading: '来自领袖与邻里的故事。',
     viewAll: '查看所有故事',
@@ -144,11 +154,11 @@ export default {
       },
       {
         title: '参与其中',
-        links: ['捐赠方式', '邮件更新', '举办活动', '官方商店', '加入我们', '志愿服务', '联系我们']
+        links: ['捐赠方式', '举办活动', '官方商店', '志愿服务', '联系我们']
       },
       {
         title: '保持联系',
-        links: ['Instagram', 'YouTube', 'Facebook', 'LinkedIn', 'X']
+        links: ['Instagram', 'YouTube', 'Facebook', 'LinkedIn']
       },
     ],
     note: '演示占位内容。请替换为您的真实文本、图片及链接。',

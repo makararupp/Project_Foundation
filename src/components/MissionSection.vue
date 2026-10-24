@@ -121,7 +121,7 @@ const { t } = useI18n()
 }
 
 .mission-quote {
-  font-family: var(--serif);
+  font-family: var(--text);
   font-style: italic;
   font-size: clamp(18px, 2.2vw, 24px);
   line-height: 1.5;

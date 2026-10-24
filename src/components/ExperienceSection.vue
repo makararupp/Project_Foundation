@@ -16,27 +16,27 @@ const experienceImages = [
       <div class="sec-head"><h2>{{ t('experience.heading') }}</h2></div>
       <div class="three">
         <article>
-          <div class="ph ex-ph">
+          <router-link to="/programs" class="ph ex-ph" tabindex="-1" aria-hidden="true">
             <img :src="experienceImages[0].src" :alt="experienceImages[0].alt" class="ex-img" />
-          </div>
+          </router-link>
           <h3>{{ t('experience.item1Title') }}</h3>
           <p>{{ t('experience.item1Text') }}</p>
           <router-link class="link" to="/programs">{{ t('experience.item1Link') }}</router-link>
         </article>
 
         <article>
-          <div class="ph ex-ph">
+          <router-link to="/volunteer" class="ph ex-ph" tabindex="-1" aria-hidden="true">
             <img :src="experienceImages[1].src" :alt="experienceImages[1].alt" class="ex-img" />
-          </div>
+          </router-link>
           <h3>{{ t('experience.item2Title') }}</h3>
           <p>{{ t('experience.item2Text') }}</p>
           <router-link class="link" to="/volunteer">{{ t('experience.item2Link') }}</router-link>
         </article>
 
         <article>
-          <div class="ph ex-ph">
+          <router-link to="/donate" class="ph ex-ph" tabindex="-1" aria-hidden="true">
             <img :src="experienceImages[2].src" :alt="experienceImages[2].alt" class="ex-img" />
-          </div>
+          </router-link>
           <h3>{{ t('experience.item3Title') }}</h3>
           <p>{{ t('experience.item3Text') }}</p>
           <router-link class="link" to="/donate">{{ t('experience.item3Link') }}</router-link>
@@ -48,6 +48,7 @@ const experienceImages = [
 
 <style scoped>
 .ex-ph {
+  display: block; /* photo is a link, same page as the text link below it */
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 14px;

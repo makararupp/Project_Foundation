@@ -97,7 +97,7 @@ const { t } = useI18n()
 }
 
 .article-quote {
-  font-family: var(--serif);
+  font-family: var(--text);
   font-style: italic;
   font-size: clamp(20px, 2.4vw, 25px);
   line-height: 1.55;

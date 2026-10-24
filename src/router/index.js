@@ -14,6 +14,12 @@ import CampusView from '../features/campus/CampusView.vue'
 import MuseumView from '../features/museum/MuseumView.vue'
 import ProgramsView from '../features/programs/ProgramsView.vue'
 import VolunteerView from '../features/volunteer/VolunteerView.vue'
+import StoriesView from '../features/stories/StoriesView.vue'
+import StoryDetailView from '../features/stories/StoryDetailView.vue'
+import WaysToGiveView from '../features/give/WaysToGiveView.vue'
+import HostEventView from '../features/host/HostEventView.vue'
+import ShopView from '../features/shop/ShopView.vue'
+import ContactView from '../features/contact/ContactView.vue'
 
 const routes = [
   {
@@ -91,6 +97,37 @@ const routes = [
     path: '/volunteer',
     name: 'volunteer',
     component: VolunteerView,
+  },
+  {
+    path: '/stories',
+    name: 'stories',
+    component: StoriesView,
+  },
+  {
+    path: '/stories/:id',
+    name: 'story',
+    component: StoryDetailView,
+    props: true,
+  },
+  {
+    path: '/ways-to-give',
+    name: 'ways-to-give',
+    component: WaysToGiveView,
+  },
+  {
+    path: '/host-event',
+    name: 'host-event',
+    component: HostEventView,
+  },
+  {
+    path: '/shop',
+    name: 'shop',
+    component: ShopView,
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: ContactView,
   },
 ]
 

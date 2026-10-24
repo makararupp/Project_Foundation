@@ -4,7 +4,7 @@
       <header class="press-head">
         <h1>{{ t('press.title') }}</h1>
         <p>{{ t('press.intro') }}</p>
-        <a class="contact-btn" :href="contactHref">{{ t('press.contact') }}</a>
+        <a class="contact-btn" :href="contactHref('Press request')">{{ t('press.contact') }}</a>
       </header>
 
       <section class="resources">
@@ -27,7 +27,8 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
-import { contactHref, resources } from './press.js'
+import { resources } from './press.js'
+import { contactHref } from '../../data/content.js'
 
 const { t } = useI18n()
 </script>

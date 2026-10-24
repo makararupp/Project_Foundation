@@ -15,4 +15,3 @@ export default defineConfig({
     open: true,          // auto-open browser when you run `npm run dev`
   },
 })
-

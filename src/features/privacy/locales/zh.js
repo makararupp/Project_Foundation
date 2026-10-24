@@ -33,7 +33,7 @@ export default {
         '本网站的部分功能由其他公司提供，他们可能会收到您的 IP 地址等基本信息：',
         'YouTube 用于播放“关于我们”页面上的视频。我们使用 YouTube 的隐私增强模式，因此只有在您点击播放后，YouTube 才会设置 Cookie。',
         'Google Fonts 提供本网站使用的字体。',
-        'Google Maps 用于在首页、园区和博物馆页面上显示我们的位置地图。',
+        'Google Maps 用于在本网站的多个页面上显示我们的位置地图。',
         '支付服务商代表我们安全地处理捐赠。',
         '当您通过我们的链接访问 Facebook、Instagram 或 YouTube 时，将适用其各自的隐私政策。',
       ],

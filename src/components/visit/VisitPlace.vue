@@ -229,7 +229,7 @@ const address = computed(() => {
 }
 
 .tips li {
-  font-family: var(--serif);
+  font-family: var(--text);
   font-size: 19px;
   line-height: 1.6;
   color: var(--muted);

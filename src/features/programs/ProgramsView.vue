@@ -1,7 +1,7 @@
 <template>
   <InfoPage ns="programsPage" image="/images/event.jpg" primary-to="/#signup" secondary-to="/volunteer">
-    <!-- All programs -->
-    <section class="info-section">
+    <!-- All programs (home page "View all programs" jumps here) -->
+    <section id="all-programs" class="info-section">
       <div class="wrap">
         <h2>{{ t('programsPage.listHeading') }}</h2>
         <ul class="program-list">

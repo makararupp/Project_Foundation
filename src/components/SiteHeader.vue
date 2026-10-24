@@ -117,6 +117,21 @@ onUnmounted(() => window.removeEventListener('click', handleClickOutside))
 </script>
 
 <style scoped>
+/* Menu links (Visit, Stories, Mission, Programs, About): heading font, bold
+   (--serif is Barlow Condensed in English, Battambang in Khmer) */
+#primary-nav > ul > li > a {
+  font-family: var(--serif);
+  font-size: 27px;
+  font-weight: 700;
+}
+
+/* Logo text: same font and weight as the menu links (layout.css default weight is 600) */
+.brand {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 700;
+}
+
 /* Drawer icon: display is controlled in layout.css (shown only on small screens) */
 .menu-toggle {
   position: relative;

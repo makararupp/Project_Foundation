@@ -11,6 +11,11 @@ import campus from '../features/campus/locales/en.js'
 import museum from '../features/museum/locales/en.js'
 import programsPage from '../features/programs/locales/en.js'
 import volunteer from '../features/volunteer/locales/en.js'
+import storiesPage from '../features/stories/locales/en.js'
+import give from '../features/give/locales/en.js'
+import host from '../features/host/locales/en.js'
+import shop from '../features/shop/locales/en.js'
+import contact from '../features/contact/locales/en.js'
 
 export default {
   nav: {
@@ -62,6 +67,11 @@ export default {
   museum,
   programsPage,
   volunteer,
+  storiesPage,
+  give,
+  host,
+  shop,
+  contact,
   stories: {
     heading: 'Stories from leaders and neighbors.',
     viewAll: 'View all stories',
@@ -144,11 +154,11 @@ export default {
       },
       {
         title: 'Get involved',
-        links: ['Ways to give', 'Email updates', 'Host an event', 'Shop', 'Careers', 'Volunteer', 'Contact us']
+        links: ['Ways to give', 'Host an event', 'Shop', 'Volunteer', 'Contact us']
       },
       {
         title: 'Stay connected',
-        links: ['Instagram', 'YouTube', 'Facebook', 'LinkedIn', 'X']
+        links: ['Instagram', 'YouTube', 'Facebook', 'LinkedIn']
       },
     ],
     note: 'Placeholder content. Replace the text, images, and links with your own.',

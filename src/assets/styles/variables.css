@@ -22,6 +22,10 @@
   --mono:  "Roboto Mono", monospace;
   /* Tall, narrow bold headings (Financials, FAQ, Press, Leadership pages) */
   --condensed: "Barlow Condensed", "Kantumruy Pro", "Inter", "Siemreap", system-ui, sans-serif;
+  /* Paragraph font. Same as --serif by default; English switches it to --text-serif */
+  --text: "Cormorant Garamond", "Battambang", Georgia, "Times New Roman", serif;
+  /* Sturdy reading serif for long text */
+  --text-serif: "Source Serif 4", "Battambang", Georgia, "Times New Roman", serif;
 
   /* Hero title scale */
   --hero-title-size: clamp(40px, 6vw, 84px);
@@ -53,6 +57,7 @@ html[lang="km"],
 :root[lang="km"],
 [lang="km"] {
   --serif: "Battambang", "Kantumruy Pro", "Siemreap", serif;
+  --text:  "Battambang", "Kantumruy Pro", "Siemreap", serif;
   --sans:  "Kantumruy Pro", "Inter", "Siemreap", system-ui, sans-serif;
   --hero-title-size: clamp(26px, 3.8vw, 52px);
   --hero-title-lh: 1.4;
@@ -60,3 +65,9 @@ html[lang="km"],
 }
 
 
+
+/* English typography: tall condensed headings, sturdy serif paragraphs */
+html[lang="en"] {
+  --serif: "Barlow Condensed", "Inter", system-ui, sans-serif;
+  --text:  var(--text-serif);
+}
