@@ -20,7 +20,7 @@ const visitImages = [
           </div>
           <h3>{{ t('visit.theCampus') }}</h3>
           <p>{{ t('visit.theCampusText') }}</p>
-          <a class="link" href="#">{{ t('visit.theCampusLink') }}</a>
+          <router-link class="link" to="/campus">{{ t('visit.theCampusLink') }}</router-link>
         </article>
 
         <article>
@@ -29,7 +29,7 @@ const visitImages = [
           </div>
           <h3>{{ t('visit.theMuseum') }}</h3>
           <p>{{ t('visit.theMuseumText') }}</p>
-          <a class="link" href="#">{{ t('visit.theMuseumLink') }}</a>
+          <router-link class="link" to="/museum">{{ t('visit.theMuseumLink') }}</router-link>
         </article>
       </div>
     </div>

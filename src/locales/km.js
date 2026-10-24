@@ -7,6 +7,8 @@ import donatePage from '../features/donate/locales/km.js'
 import financials from '../features/financials/locales/km.js'
 import terms from '../features/terms/locales/km.js'
 import privacy from '../features/privacy/locales/km.js'
+import campus from '../features/campus/locales/km.js'
+import museum from '../features/museum/locales/km.js'
 
 export default {
   nav: {
@@ -54,6 +56,8 @@ export default {
   financials,
   terms,
   privacy,
+  campus,
+  museum,
   stories: {
     heading: 'រឿងរ៉ាវពីអ្នកដឹកនាំ និងអ្នកជិតខាង។',
     viewAll: 'មើលរឿងរ៉ាវទាំងអស់',

@@ -72,3 +72,11 @@ export const footer = {
     YouTube: 'https://www.youtube.com/channel/UC7_7AUnS2rluymlXC0DJxAA',
   },
 }
+
+// Location links, used on the home page (Programs), Campus and Museum pages.
+export const location = {
+  // Google Maps share link (opens directions)
+  directionsUrl: 'https://share.google/BLGF0PDJbhYDgRtjH',
+  // Google Maps → Share → Embed a map: copy only the src="..." address
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.1111475273287!2d103.87554527516335!3d13.343361587007246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311017f6edc54967%3A0xbd142942947ca89!2sHomeall%20Village!5e0!3m2!1sen!2skh!4v1792820666996!5m2!1sen!2skh',
+}

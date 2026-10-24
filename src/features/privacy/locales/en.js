@@ -34,6 +34,7 @@ export default {
         'Some parts of this website are provided by other companies, who may receive basic information such as your IP address:',
         'YouTube shows the video on our About page. We use YouTube’s privacy-enhanced mode, so YouTube only sets cookies after you press play.',
         'Google Fonts provides the fonts used on this website.',
+        'Google Maps shows the map of our location on the home, Campus, and Museum pages.',
         'Payment providers process donations securely on our behalf.',
         'When you follow our links to Facebook, Instagram, or YouTube, their own privacy policies apply.',
       ],

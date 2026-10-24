@@ -7,6 +7,8 @@ import donatePage from '../features/donate/locales/en.js'
 import financials from '../features/financials/locales/en.js'
 import terms from '../features/terms/locales/en.js'
 import privacy from '../features/privacy/locales/en.js'
+import campus from '../features/campus/locales/en.js'
+import museum from '../features/museum/locales/en.js'
 
 export default {
   nav: {
@@ -54,6 +56,8 @@ export default {
   financials,
   terms,
   privacy,
+  campus,
+  museum,
   stories: {
     heading: 'Stories from leaders and neighbors.',
     viewAll: 'View all stories',

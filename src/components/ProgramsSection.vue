@@ -16,7 +16,16 @@
             </li>
           </ul>
         </div>
-        <!-- <div class="ph" aria-hidden="true"></div> -->
+        <!-- Google Map of the campus, right of the program list -->
+        <div class="programs-map">
+          <iframe
+            :src="location.mapEmbedUrl"
+            :title="t('campus.mapTitle')"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -25,7 +34,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { programs } from '../data/content.js'
+import { programs, location } from '../data/content.js'
 
 const { t, tm } = useI18n()
 
@@ -38,5 +47,54 @@ const translatedPrograms = computed(() => {
 .programs {
   background: var(--surface);
   border-block: 1px solid var(--line);
+}
+
+/* Wider map: list 1 part, map 1.8 parts (layout.css default is 1fr 1.3fr) */
+.programs-layout {
+  grid-template-columns: 1fr 1.8fr;
+  gap: 88px; /* space between the list and the map */
+}
+
+/* Bigger program names and labels (layout.css default: 24px / 15px) */
+.programs-list a {
+  font-size: 28px;
+}
+
+.programs-list a span {
+  font-size: 17px;
+}
+
+/* Map fills the right column, as tall as the program list */
+.programs-map {
+  min-height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--sky);
+}
+
+.programs-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .programs-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .programs-list a {
+    font-size: 24px;
+  }
+  .programs-list a span {
+    font-size: 15px;
+  }
+  .programs-map,
+  .programs-map iframe {
+    min-height: 320px;
+  }
 }
 </style>

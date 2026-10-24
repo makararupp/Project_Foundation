@@ -7,6 +7,8 @@ import donatePage from '../features/donate/locales/zh.js'
 import financials from '../features/financials/locales/zh.js'
 import terms from '../features/terms/locales/zh.js'
 import privacy from '../features/privacy/locales/zh.js'
+import campus from '../features/campus/locales/zh.js'
+import museum from '../features/museum/locales/zh.js'
 
 export default {
   nav: {
@@ -54,6 +56,8 @@ export default {
   financials,
   terms,
   privacy,
+  campus,
+  museum,
   stories: {
     heading: '来自领袖与邻里的故事。',
     viewAll: '查看所有故事',
