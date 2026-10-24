@@ -67,6 +67,7 @@ export const footer = {
     FAQs: '/faq',
     'Ways to give': '/donate',
     Financials: '/financials',
+    Volunteer: '/volunteer',
     Instagram: 'https://www.instagram.com/explore/locations/1737053139937061/homeall-village/',
     Facebook: 'https://web.facebook.com/homeallvillage',
     YouTube: 'https://www.youtube.com/channel/UC7_7AUnS2rluymlXC0DJxAA',

@@ -21,7 +21,7 @@ const experienceImages = [
           </div>
           <h3>{{ t('experience.item1Title') }}</h3>
           <p>{{ t('experience.item1Text') }}</p>
-          <a class="link" href="#">{{ t('experience.item1Link') }}</a>
+          <router-link class="link" to="/programs">{{ t('experience.item1Link') }}</router-link>
         </article>
 
         <article>
@@ -30,7 +30,7 @@ const experienceImages = [
           </div>
           <h3>{{ t('experience.item2Title') }}</h3>
           <p>{{ t('experience.item2Text') }}</p>
-          <a class="link" href="#">{{ t('experience.item2Link') }}</a>
+          <router-link class="link" to="/volunteer">{{ t('experience.item2Link') }}</router-link>
         </article>
 
         <article>
@@ -39,7 +39,7 @@ const experienceImages = [
           </div>
           <h3>{{ t('experience.item3Title') }}</h3>
           <p>{{ t('experience.item3Text') }}</p>
-          <a class="link" href="#">{{ t('experience.item3Link') }}</a>
+          <router-link class="link" to="/donate">{{ t('experience.item3Link') }}</router-link>
         </article>
       </div>
     </div>

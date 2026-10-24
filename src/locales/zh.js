@@ -9,6 +9,8 @@ import terms from '../features/terms/locales/zh.js'
 import privacy from '../features/privacy/locales/zh.js'
 import campus from '../features/campus/locales/zh.js'
 import museum from '../features/museum/locales/zh.js'
+import programsPage from '../features/programs/locales/zh.js'
+import volunteer from '../features/volunteer/locales/zh.js'
 
 export default {
   nav: {
@@ -58,6 +60,8 @@ export default {
   privacy,
   campus,
   museum,
+  programsPage,
+  volunteer,
   stories: {
     heading: '来自领袖与邻里的故事。',
     viewAll: '查看所有故事',

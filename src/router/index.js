@@ -12,6 +12,8 @@ import TermsView from '../features/terms/TermsView.vue'
 import PrivacyView from '../features/privacy/PrivacyView.vue'
 import CampusView from '../features/campus/CampusView.vue'
 import MuseumView from '../features/museum/MuseumView.vue'
+import ProgramsView from '../features/programs/ProgramsView.vue'
+import VolunteerView from '../features/volunteer/VolunteerView.vue'
 
 const routes = [
   {
@@ -79,6 +81,16 @@ const routes = [
     path: '/museum',
     name: 'museum',
     component: MuseumView,
+  },
+  {
+    path: '/programs',
+    name: 'programs',
+    component: ProgramsView,
+  },
+  {
+    path: '/volunteer',
+    name: 'volunteer',
+    component: VolunteerView,
   },
 ]
 

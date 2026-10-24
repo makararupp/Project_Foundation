@@ -9,6 +9,8 @@ import terms from '../features/terms/locales/km.js'
 import privacy from '../features/privacy/locales/km.js'
 import campus from '../features/campus/locales/km.js'
 import museum from '../features/museum/locales/km.js'
+import programsPage from '../features/programs/locales/km.js'
+import volunteer from '../features/volunteer/locales/km.js'
 
 export default {
   nav: {
@@ -58,6 +60,8 @@ export default {
   privacy,
   campus,
   museum,
+  programsPage,
+  volunteer,
   stories: {
     heading: 'រឿងរ៉ាវពីអ្នកដឹកនាំ និងអ្នកជិតខាង។',
     viewAll: 'មើលរឿងរ៉ាវទាំងអស់',
