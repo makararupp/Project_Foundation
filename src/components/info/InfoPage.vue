@@ -130,7 +130,7 @@ const features = computed(() => {
 }
 
 .feature-num {
-  font-family: var(--mono);
+  font-family: var(--text);
   font-size: 14px;
   color: var(--muted);
 }

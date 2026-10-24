@@ -3,11 +3,12 @@
    ============================================================ */
 html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
 *, *::before, *::after { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--text); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 img, svg { max-width: 100%; display: block; }
 a { color: inherit; }
-/* Fonts: headings use --serif, paragraphs use --text (see variables.css) */
+/* Fonts: only two in the whole site — headings use --serif, everything else uses --text (see variables.css) */
 h1, h4, h5, h6 { font-family: var(--serif); }
+button, input, select, textarea { font-family: inherit; }
 p { font-family: var(--text); font-size: 20px; }
 :focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; border-radius: 4px; }
 
@@ -27,12 +28,12 @@ p { font-family: var(--text); font-size: 20px; }
 /* Khmer Typography & Line Height */
 html[lang="km"],
 [lang="km"] {
-  font-family: var(--sans);
+  font-family: var(--text);
   line-height: 1.8;
 }
 
 html[lang="km"] body {
-  font-family: var(--sans);
+  font-family: var(--text);
 }
 
 html[lang="km"] p {
@@ -52,7 +53,7 @@ html[lang="km"] button,
 html[lang="km"] input,
 html[lang="km"] select,
 html[lang="km"] textarea {
-  font-family: var(--sans);
+  font-family: var(--text);
 }
 
 

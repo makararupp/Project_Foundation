@@ -155,7 +155,7 @@ function openModal(freq) {
 }
 
 .impact-num {
-  font-family: var(--mono);
+  font-family: var(--text);
   font-size: 14px;
   color: var(--muted);
 }

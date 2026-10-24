@@ -82,7 +82,7 @@ nav a:hover { border-color: var(--sun); }
 .programs-list li { border-bottom: 1px solid var(--line); }
 .programs-list a { display: flex; justify-content: space-between; align-items: center; padding: 20px 4px; text-decoration: none; font-family: var(--serif); font-size: 24px; font-weight: 600; }
 .programs-list a:hover { padding-left: 14px; background: var(--sky); }
-.programs-list a span { font-family: var(--sans); font-size: 15px; font-weight: 500; color: var(--muted); }
+.programs-list a span { font-family: var(--text); font-size: 15px; font-weight: 500; color: var(--muted); }
 .programs-layout { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; }
 
 /* --- Donate --- */

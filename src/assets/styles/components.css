@@ -19,7 +19,7 @@
 /* Announcement bar */
 .notice { background: var(--ink); color: var(--on-ink); font-size: 15px; }
 .notice .wrap { display: flex; gap: 16px; align-items: center; justify-content: space-between; padding: 10px 0; flex-wrap: wrap; }
-.notice p { margin: 0; }
+.notice p { margin: 0; font-size: 15px; }
 .notice a { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 
 /* Form elements */

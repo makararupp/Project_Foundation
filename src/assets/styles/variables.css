@@ -16,8 +16,6 @@
 
   /* Typography */
   --serif: "Cormorant Garamond", "Battambang", Georgia, "Times New Roman", serif;
-  --sans:  "Instrument Sans", "Kantumruy Pro", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  --mono:  "Roboto Mono", monospace;
   /* Paragraph font. Same as --serif by default; English switches it to --text-serif */
   --text: "Cormorant Garamond", "Battambang", Georgia, "Times New Roman", serif;
   /* Sturdy reading serif for long text */
@@ -54,7 +52,6 @@ html[lang="km"],
 [lang="km"] {
   --serif: "Battambang", "Kantumruy Pro", serif;
   --text:  "Kantumruy Pro", "Battambang", sans-serif; /* Khmer paragraphs: easy-to-read Kantumruy Pro */
-  --sans:  "Kantumruy Pro", system-ui, sans-serif;
   --hero-title-size: clamp(26px, 3.8vw, 52px);
   --hero-title-lh: 1.4;
   --hero-title-ls: 0;
