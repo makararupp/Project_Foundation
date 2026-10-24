@@ -96,16 +96,16 @@ const storeHours = computed(() => {
 }
 
 .store-heading {
-  font-family: var(--text);
-  font-size: 17px;
-  font-weight: 600;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
   margin: 0 0 24px;
 }
 
 .col-heading {
-  font-family: var(--sans);
-  font-size: 15px;
-  font-weight: 600;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 700;
   margin: 0 0 8px;
 }
 

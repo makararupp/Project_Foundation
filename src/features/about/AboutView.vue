@@ -292,7 +292,7 @@ const address = computed(() => {
 }
 
 .eyebrow {
-  font-family: var(--sans) !important;
+  font-family: var(--serif) !important;
   font-size: 14px !important;
   font-weight: 700 !important;
   letter-spacing: 0.08em;

@@ -83,6 +83,14 @@ function linkUrl(ci, li) {
 footer {
   background: var(--surface);
   border-block: 1px solid var(--line);
+  /* Footer text (links, address, hours, legal) in the paragraph font;
+     column headings (h4) keep --serif from layout.css */
+  font-family: var(--text);
+}
+
+/* Buttons and inputs don't inherit fonts by default */
+footer :is(button, input) {
+  font-family: inherit;
 }
 
 /* Terms of service / Privacy policy: only the yellow line on hover, no extra underline */

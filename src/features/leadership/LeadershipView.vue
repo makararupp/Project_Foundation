@@ -43,7 +43,7 @@ const { t } = useI18n()
 }
 
 .leadership-head h1 {
-  font-family: var(--condensed);
+  font-family: var(--serif);
   font-size: clamp(40px, 5.6vw, 72px);
   font-weight: 800;
   line-height: 1.05;
@@ -67,7 +67,7 @@ const { t } = useI18n()
 }
 
 .team h2 {
-  font-family: var(--condensed);
+  font-family: var(--serif);
   font-size: 22px;
   font-weight: 800;
   margin: 0 0 24px;
@@ -113,7 +113,7 @@ const { t } = useI18n()
 }
 
 .person h3 {
-  font-family: var(--condensed);
+  font-family: var(--serif);
   font-size: 16px;
   font-weight: 800;
   margin: 0 0 4px;

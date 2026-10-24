@@ -73,10 +73,11 @@ const { t } = useI18n()
 }
 
 .mission-lead {
-  font-family: var(--sans);
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 400;
-  line-height: 1.45;
+  /* Mission statement in the heading font (Barlow Condensed in English) */
+  font-family: var(--serif);
+  font-size: clamp(30px, 3.8vw, 46px);
+  font-weight: 600;
+  line-height: 1.25;
   color: var(--ink);
   margin: 0;
 }

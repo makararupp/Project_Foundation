@@ -245,7 +245,7 @@ onUnmounted(() => {
 }
 .dm-shield { color: #2E77BC; display: flex; }
 .dm-title {
-  font-family: system-ui, sans-serif;
+  font-family: var(--serif);
   font-size: 20px;
   font-weight: 700;
   margin: 0;

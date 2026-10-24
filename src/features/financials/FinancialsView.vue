@@ -67,7 +67,7 @@ const fileName = (href) => href.split('/').pop()
 }
 
 .fin-text h1 {
-  font-family: var(--condensed);
+  font-family: var(--serif);
   font-size: clamp(44px, 6vw, 84px);
   font-weight: 800;
   line-height: 1;
@@ -101,7 +101,7 @@ const fileName = (href) => href.split('/').pop()
 }
 
 .fin-reports h2 {
-  font-family: var(--condensed);
+  font-family: var(--serif);
   font-size: 32px;
   font-weight: 800;
   line-height: 1.1;
@@ -113,7 +113,7 @@ const fileName = (href) => href.split('/').pop()
 }
 
 .year h3 {
-  font-family: var(--condensed);
+  font-family: var(--serif);
   font-size: 36px;
   font-weight: 800;
   line-height: 1;
@@ -128,7 +128,7 @@ const fileName = (href) => href.split('/').pop()
 
 .doc-list li {
   margin-bottom: 16px;
-  font-family: var(--condensed);
+  font-family: var(--serif);
   font-size: 22px;
   font-weight: 700;
   line-height: 1.3;

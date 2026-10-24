@@ -120,16 +120,16 @@ onUnmounted(() => window.removeEventListener('click', handleClickOutside))
 /* Menu links (Visit, Stories, Mission, Programs, About): heading font, bold
    (--serif is Barlow Condensed in English, Battambang in Khmer) */
 #primary-nav > ul > li > a {
+  text-transform: uppercase; /* VISIT, STORIES… (no effect on Khmer/Chinese) */
+  letter-spacing: 0.02em;
   font-family: var(--serif);
-  font-size: 27px;
-  font-weight: 700;
+  font-size: 22px;
 }
 
 /* Logo text: same font and weight as the menu links (layout.css default weight is 600) */
 .brand {
   font-family: var(--serif);
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 22px;
 }
 
 /* Drawer icon: display is controlled in layout.css (shown only on small screens) */

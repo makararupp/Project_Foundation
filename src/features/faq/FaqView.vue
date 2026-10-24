@@ -95,7 +95,7 @@ const address = computed(() => {
 }
 
 .faq-info h2 {
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 13px;
   font-weight: 600;
   margin: 0 0 6px;

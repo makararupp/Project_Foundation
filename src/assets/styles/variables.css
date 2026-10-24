@@ -16,12 +16,8 @@
 
   /* Typography */
   --serif: "Cormorant Garamond", "Battambang", Georgia, "Times New Roman", serif;
-  --sans:  "Instrument Sans", "Kantumruy Pro", "Inter", "Siemreap", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  --font-khmer: "Kantumruy Pro", "Inter", "Siemreap", sans-serif;
-  --font-khmer-heading: "Battambang", "Kantumruy Pro", "Siemreap", serif;
+  --sans:  "Instrument Sans", "Kantumruy Pro", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
   --mono:  "Roboto Mono", monospace;
-  /* Tall, narrow bold headings (Financials, FAQ, Press, Leadership pages) */
-  --condensed: "Barlow Condensed", "Kantumruy Pro", "Inter", "Siemreap", system-ui, sans-serif;
   /* Paragraph font. Same as --serif by default; English switches it to --text-serif */
   --text: "Cormorant Garamond", "Battambang", Georgia, "Times New Roman", serif;
   /* Sturdy reading serif for long text */
@@ -56,9 +52,9 @@
 html[lang="km"],
 :root[lang="km"],
 [lang="km"] {
-  --serif: "Battambang", "Kantumruy Pro", "Siemreap", serif;
-  --text:  "Battambang", "Kantumruy Pro", "Siemreap", serif;
-  --sans:  "Kantumruy Pro", "Inter", "Siemreap", system-ui, sans-serif;
+  --serif: "Battambang", "Kantumruy Pro", serif;
+  --text:  "Kantumruy Pro", "Battambang", sans-serif; /* Khmer paragraphs: easy-to-read Kantumruy Pro */
+  --sans:  "Kantumruy Pro", system-ui, sans-serif;
   --hero-title-size: clamp(26px, 3.8vw, 52px);
   --hero-title-lh: 1.4;
   --hero-title-ls: 0;
@@ -68,6 +64,6 @@ html[lang="km"],
 
 /* English typography: tall condensed headings, sturdy serif paragraphs */
 html[lang="en"] {
-  --serif: "Barlow Condensed", "Inter", system-ui, sans-serif;
+  --serif: "Barlow Condensed", system-ui, sans-serif;
   --text:  var(--text-serif);
 }

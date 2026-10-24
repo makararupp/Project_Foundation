@@ -69,7 +69,7 @@ const address = computed(() => {
 }
 
 .updated {
-  font-family: var(--sans);
+  font-family: var(--text);
   font-size: 15px;
   color: var(--muted);
   margin: 0;
