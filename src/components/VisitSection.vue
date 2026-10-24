@@ -37,6 +37,10 @@ const visitImages = [
 </template>
 
 <style scoped>
+#visit {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
 .visit-ph {
   overflow: hidden;
   border-radius: 14px;

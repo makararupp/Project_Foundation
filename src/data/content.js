@@ -62,6 +62,10 @@ export const footer = {
   linkUrls: {
     About: '/about',
     'Mission and values': '/mission',
-    Facebook: 'https://web.facebook.com/homeallvillage/',
+    Leadership: '/leadership',
+    'Press and media': '/press',
+    Instagram: 'https://www.instagram.com/explore/locations/1737053139937061/homeall-village/',
+    Facebook: 'https://web.facebook.com/homeallvillage',
+    YouTube: 'https://www.youtube.com/channel/UC7_7AUnS2rluymlXC0DJxAA',
   },
 }

@@ -34,3 +34,9 @@ const translatedPrograms = computed(() => {
   return Array.isArray(items) && items.length > 0 ? items : programs
 })
 </script>
+<style scoped>
+.programs {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+</style>

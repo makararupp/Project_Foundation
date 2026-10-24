@@ -99,3 +99,10 @@ async function submit(e) {
   }
 }
 </script>
+
+<style scoped>
+.signup {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+</style>

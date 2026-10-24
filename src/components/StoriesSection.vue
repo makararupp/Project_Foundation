@@ -43,6 +43,10 @@ const translatedStories = computed(() => {
 </template>
 
 <style scoped>
+#stories {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
 .story-ph {
   overflow: hidden;
   border-radius: 14px;

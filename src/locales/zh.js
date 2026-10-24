@@ -1,5 +1,7 @@
 import mission from '../features/mission/locales/zh.js'
 import about from '../features/about/locales/zh.js'
+import leadership from '../features/leadership/locales/zh.js'
+import press from '../features/press/locales/zh.js'
 
 export default {
   nav: {
@@ -40,6 +42,8 @@ export default {
   },
   mission,
   about,
+  leadership,
+  press,
   stories: {
     heading: '来自领袖与邻里的故事。',
     viewAll: '查看所有故事',

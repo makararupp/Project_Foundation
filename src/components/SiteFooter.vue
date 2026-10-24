@@ -79,3 +79,9 @@ function linkUrl(ci, li) {
   return name ? footer.linkUrls[name] : undefined
 }
 </script>
+<style scoped>
+footer {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+</style>

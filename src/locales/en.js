@@ -1,5 +1,7 @@
 import mission from '../features/mission/locales/en.js'
 import about from '../features/about/locales/en.js'
+import leadership from '../features/leadership/locales/en.js'
+import press from '../features/press/locales/en.js'
 
 export default {
   nav: {
@@ -40,6 +42,8 @@ export default {
   },
   mission,
   about,
+  leadership,
+  press,
   stories: {
     heading: 'Stories from leaders and neighbors.',
     viewAll: 'View all stories',
